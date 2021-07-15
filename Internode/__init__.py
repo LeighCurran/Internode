@@ -53,13 +53,16 @@ class api:
     def getusage(self):
         usagedata = self.request('usage')
         tree = ElementTree.fromstring(usagedata.content)
-        usage_tree = tree.find('api/traffic')
-        usage = float(usage_tree.text)/1000000000
+        usagexml = tree.find('api/traffic')
+        usage = float(usagexml.text)/1000000000
         self.usage = "{:.2f}".format(usage)
+        self.rollover = usagexml.get('rollover')
+        self.planinterval = usagexml.get('plan-interval')
+        self.quota = float(usagexml.get('quota'))/1000000000
 
     def gethistory(self):
         historydata = self.request('history')
         tree = ElementTree.fromstring(historydata.content)
-        history_tree = tree.find('api/usagelist/usage/traffic')
-        history = float(history_tree.text)/1000000000
+        historyxml = tree.find('api/usagelist/usage/traffic')
+        history = float(historyxml.text)/1000000000
         self.history = "{:.2f}".format(history)

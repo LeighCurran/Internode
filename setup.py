@@ -5,7 +5,7 @@ from os import path
 setup(
   name = 'internode',
   packages = ['internode'],
-  version = '1.0.0',
+  version = '1.1.1',
   license='MIT',
   description = 'Python library to access the Internode API: https://customer-webtools-api.internode.on.net/api/v1.5',
   long_description="""Internode is a package to pull data from https://customer-webtools-api.internode.on.net/api/v1.5. To use the Internode API you need a valid account with Internode.
