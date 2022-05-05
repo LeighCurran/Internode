@@ -1,5 +1,5 @@
 [![buy me a coffee](https://img.shields.io/badge/If%20you%20like%20it-Buy%20us%20a%20coffee-green.svg?style=for-the-badge)](https://www.buymeacoffee.com/leighcurran)
-![Maintenance](https://img.shields.io/maintenance/yes/2021.svg?style=for-the-badge)
+![Maintenance](https://img.shields.io/maintenance/yes/2022.svg?style=for-the-badge)
 
 Internode is a package to pull data from https://customer-webtools-api.internode.on.net/api/v1.5. To use the Internode API you need a valid account with Internode.
 
